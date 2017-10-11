@@ -1,0 +1,9 @@
+{
+  "name": "test",//名称需跟注册表的项名称一致
+  "description": "open notepad.exe",
+  "path": "E:\\wamp64\\www\\plugin\\test\\do.bat",//执行cmd命令的文件路径
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://bembnmiponfioaodneeklldknndfdbpg/" //ID为添加插件后生成的ID
+  ]
+}

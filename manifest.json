@@ -1,0 +1,27 @@
+
+{
+  "name" : "调用记事本",//名称
+  "description" : "点击按钮调用记事本",//介绍
+  "version" : "1.0.0",//版本
+  "manifest_version": 2,//必须为2
+
+
+  "permissions" : [
+    //必须，定义权限，需要和本地应用程序通信
+    "nativeMessaging"
+  ],
+
+  //匹配所有url都执行test.js
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file:///E:/wamp64/www/plugin/test/test.html"
+      ],
+      "js": ["test.js"]
+    }
+  ],
+
+  "background" : { "scripts": ["background.js"] } //常驻后台，用于监听请求
+}
